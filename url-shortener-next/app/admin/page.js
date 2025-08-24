@@ -12,7 +12,7 @@ export default function AdminPage() {
 
   useEffect(() => {
     if (isAuthorized) {
-      fetch("http://localhost:5000/api/admin/urls")
+      fetch("https://urlshortner-backend-rmir.onrender.com/api/admin/urls")
         .then((res) => res.json())
         .then((data) => setUrls(data))
         .catch(console.error);
@@ -75,7 +75,7 @@ export default function AdminPage() {
               <tr key={url._id} className="border-t border-gray-700">
                 <td className="p-3 text-green-400">
                   <a
-                    href={`http://localhost:5000/${url.shortCode}`}
+                    href={`https://urlshortner-backend-rmir.onrender.com/${url.shortCode}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
